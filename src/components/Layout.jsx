@@ -3,20 +3,22 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/img/medilogo.png';
 
 export default function Layout({ children }) {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-slate-50">
       <header className="bg-white shadow-md sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-3 overflow-visible">
-            <img
-              src={logo}
-              alt="Medisafe Suppliers Limited logo"
-            className="h-20 w-auto scale-150 object-contain"
-            />
-          </Link>
+          <div className="flex items-center justify-between h-16">
+            <Link to="/" className="flex items-center gap-3 overflow-visible">
+              <img
+                src={logo}
+                alt="Medisafe Suppliers Limited logo"
+                className="h-20 w-auto scale-150 object-contain"
+              />
+            </Link>
 
-
+            {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-6 text-[15px]">
               <NavLink
                 to="/"
@@ -62,7 +64,78 @@ export default function Layout({ children }) {
                 Contact
               </Link>
             </nav>
+
+            {/* Mobile menu toggle */}
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-slate-200 text-slate-700"
+              onClick={() => setMobileOpen((open) => !open)}
+            >
+              <span className="sr-only">Toggle navigation</span>
+              <span className="block w-4 h-[1px] bg-current relative">
+                <span className="absolute -top-1.5 left-0 w-4 h-[1px] bg-current" />
+                <span className="absolute top-1.5 left-0 w-4 h-[1px] bg-current" />
+              </span>
+            </button>
           </div>
+
+          {/* Mobile nav */}
+          {mobileOpen && (
+            <nav className="md:hidden pb-3 border-t border-slate-100">
+              <div className="flex flex-col gap-2 pt-2 text-sm">
+                <NavLink
+                  to="/"
+                  end
+                  className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  About
+                </NavLink>
+                <NavLink
+                  to="/products-services"
+                  className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Products &amp; Services
+                </NavLink>
+                <NavLink
+                  to="/corporates-investors"
+                  className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Corporates &amp; Investors
+                </NavLink>
+                <NavLink
+                  to="/quality-compliance"
+                  className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Quality &amp; Compliance
+                </NavLink>
+                <NavLink
+                  to="/partners"
+                  className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Partners
+                </NavLink>
+                <Link
+                  to="/contact"
+                  className="mt-1 inline-flex items-center justify-center rounded-full bg-sky-600 text-white px-4 py-1.5 text-xs font-semibold shadow-sm hover:bg-sky-700 w-fit"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Contact
+                </Link>
+              </div>
+            </nav>
+          )}
         </div>
       </header>
 
