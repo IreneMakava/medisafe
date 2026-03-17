@@ -1,5 +1,5 @@
 import React from 'react';
-import pharmacistShelves from '../images/pharmacist-shelves.jpg';
+import pharmacistShelves from '../assets/img/pharmacist-shelves.jpg';
 
 export default function ProductsServicesPage() {
   return (

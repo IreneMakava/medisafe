@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroSurgery from '../images/hero-surgery.jpg';
-import clinicianTablet from '../images/clinician-tablet.jpg';
-import supportElderly from '../images/support-elderly.jpg';
-import pharmacistShelves from '../images/pharmacist-shelves.jpg';
-import ctaWheelchair from '../images/cta-wheelchair.jpg';
+import heroSurgery from '../assets/img/hero-surgery.jpg';
+import clinicianTablet from '../assets/img/clinician-tablet.jpg';
+import supportElderly from '../assets/img/support-elderly.jpg';
+import pharmacistShelves from '../assets/img/pharmacist-shelves.jpg';
+import ctaWheelchair from '../assets/img/cta-wheelchair.jpg';
 
 export default function HomePage() {
   return (

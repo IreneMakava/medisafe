@@ -1,5 +1,5 @@
 import React from 'react';
-import clinicianTablet from '../images/clinician-tablet.jpg';
+import clinicianTablet from '../assets/img/clinician-tablet.jpg';
 
 export default function QualityCompliancePage() {
   return (

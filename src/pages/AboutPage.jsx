@@ -1,5 +1,5 @@
 import React from 'react';
-import surgeonsCorridor from '../images/surgeons-corridor.jpg';
+import surgeonsCorridor from '../assets/img/surgeons-corridor.jpg';
 
 export default function AboutPage() {
   return (

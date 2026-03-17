@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../../assets/img/medilogo.png';
+import logo from '../assets/img/medilogo.png';
 
 export default function Layout({ children }) {
   return (
