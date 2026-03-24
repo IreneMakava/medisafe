@@ -2,6 +2,20 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import heroSystems from '../assets/img/picture no 1.jpeg';
 import whoWeAreImage from '../assets/img/picture no 2.jpeg';
+import MissionVisionValues from '../components/MissionVisionValues.jsx';
+
+const SECTORS = [
+  'Oncology',
+  'Diagnostics',
+  'Medical Devices',
+  'Digital Health',
+  'Surgical Technologies',
+  'Critical Care',
+  'Pharmaceuticals',
+  'Dentistry',
+  'Wound Care',
+  'Healthcare Manufacturing & Local Production (Investment Capability)',
+];
 
 export default function HomePage() {
   const location = useLocation();
@@ -78,33 +92,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div>
-            <p className="text-[11px] font-semibold tracking-wide text-sky-600 uppercase mb-4">Mission, vision &amp; values</p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="bg-slate-50 rounded-3xl border border-slate-100 px-5 py-6 text-justify">
-                <p className="font-semibold text-slate-900 mb-2">Mission</p>
-                <p className="text-xs text-slate-600">
-                  To ensure consistent access to safe, compliant, and high-quality medical consumables that strengthen healthcare systems.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-3xl border border-slate-100 px-5 py-6 text-justify">
-                <p className="font-semibold text-slate-900 mb-2">Vision</p>
-                <p className="text-xs text-slate-600">
-                  To become East Africa&apos;s most trusted and compliant healthcare supply and market entry partner.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-3xl border border-slate-100 px-5 py-6 text-justify">
-                <p className="font-semibold text-slate-900 mb-3">Our values</p>
-                <ul className="text-xs text-slate-600 space-y-2">
-                  <li><span className="font-semibold text-slate-800">Integrity</span> — Honesty, transparency, professionalism</li>
-                  <li><span className="font-semibold text-slate-800">Compliance</span> — TMDA, MSD, ISO, CE, FDA adherence</li>
-                  <li><span className="font-semibold text-slate-800">Reliability</span> — Consistent supply and service</li>
-                  <li><span className="font-semibold text-slate-800">Professionalism</span> — High standards of execution</li>
-                  <li><span className="font-semibold text-slate-800">Partnership</span> — Long-term collaboration</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <MissionVisionValues />
         </div>
       </section>
 
@@ -135,17 +123,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="sectors" className="scroll-mt-20 py-12 bg-white">
+      <section id="sectors" className="scroll-mt-20 py-14 md:py-20 bg-gradient-to-b from-white via-slate-50/70 to-white">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-[11px] font-semibold tracking-wide text-sky-600 uppercase mb-2">Sectors We Support</p>
-          <p className="text-sm text-slate-700 mb-4">Medisafe Suppliers Ltd works across a broad range of clinical, diagnostic, and healthcare technology domains.</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 text-sm">
-            {['Oncology', 'Diagnostics', 'Medical Devices', 'Digital Health', 'Surgical Technologies', 'Critical Care', 'Pharmaceuticals', 'Dentistry', 'Wound Care', 'Healthcare Manufacturing & Local Production (Investment Capability)'].map((sector) => (
-              <div key={sector} className="bg-slate-50 rounded-xl border border-slate-100 px-4 py-3 text-slate-800">{sector}</div>
+          <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-[11px] font-semibold tracking-wide text-sky-600 uppercase">Sectors we support</p>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">
+                Clinical and technology domains
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600 text-justify md:text-[15px] md:leading-relaxed">
+                Medisafe Suppliers Ltd works across high-level clinical, diagnostic, and healthcare technology areas — strategic
+                coverage, not a product catalogue.
+              </p>
+            </div>
+            <div className="hidden h-px flex-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent md:block md:mb-2" aria-hidden />
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {SECTORS.map((sector) => (
+              <div
+                key={sector}
+                className="group relative flex min-h-[6.5rem] flex-col justify-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-300 before:absolute before:inset-x-0 before:top-0 before:h-1 before:content-[''] before:bg-gradient-to-r before:from-sky-500 before:to-sky-400 before:opacity-90 before:transition-opacity group-hover:before:opacity-100 hover:-translate-y-1 hover:border-sky-200/80 hover:shadow-lg hover:shadow-slate-900/[0.06]"
+              >
+                <p className="text-sm font-medium leading-snug text-slate-800">{sector}</p>
+              </div>
             ))}
           </div>
-          <Link to="/products-services" className="inline-flex mt-6 items-center rounded-full bg-sky-600 text-white px-5 py-2.5 text-xs font-semibold shadow-md hover:bg-sky-700">
-            Explore Our Sectors
+
+          <Link
+            to="/products-services"
+            className="mt-10 inline-flex items-center rounded-full bg-sky-600 px-5 py-2.5 text-xs font-semibold text-white shadow-md shadow-sky-600/20 transition hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-600/25"
+          >
+            Explore our sectors
           </Link>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import whoWeAreImage from '../assets/img/picture no 2.jpeg';
+import MissionVisionValues from '../components/MissionVisionValues.jsx';
 
 export default function AboutPage() {
   return (
@@ -41,30 +42,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4 text-sm">
-          <div className="bg-slate-50 rounded-2xl border border-slate-100 p-5">
-            <h3 className="font-semibold text-slate-900 mb-2">Mission</h3>
-            <p className="text-xs text-slate-600">
-              To ensure consistent access to safe, compliant, and high-quality medical consumables that strengthen healthcare systems.
-            </p>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-100 p-5">
-            <h3 className="font-semibold text-slate-900 mb-2">Vision</h3>
-            <p className="text-xs text-slate-600">
-              To become East Africa&apos;s most trusted and compliant healthcare supply and market entry partner.
-            </p>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-100 p-5 md:col-span-1">
-            <h3 className="font-semibold text-slate-900 mb-3">Our values</h3>
-            <ul className="text-xs text-slate-600 space-y-2">
-              <li><span className="font-semibold text-slate-800">Integrity</span> — Honesty, transparency, professionalism</li>
-              <li><span className="font-semibold text-slate-800">Compliance</span> — TMDA, MSD, ISO, CE, FDA adherence</li>
-              <li><span className="font-semibold text-slate-800">Reliability</span> — Consistent supply and service</li>
-              <li><span className="font-semibold text-slate-800">Professionalism</span> — High standards of execution</li>
-              <li><span className="font-semibold text-slate-800">Partnership</span> — Long-term collaboration</li>
-            </ul>
-          </div>
-        </div>
+        <MissionVisionValues />
       </section>
     </main>
   );
