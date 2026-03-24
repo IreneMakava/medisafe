@@ -8,6 +8,8 @@ import CorporatesInvestorsPage from './pages/CorporatesInvestorsPage.jsx';
 import QualityCompliancePage from './pages/QualityCompliancePage.jsx';
 import PartnersPage from './pages/PartnersPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import WhyTanzaniaPage from './pages/WhyTanzaniaPage.jsx';
+import InsightsPage from './pages/InsightsPage.jsx';
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
         <Route path="/corporates-investors" element={<CorporatesInvestorsPage />} />
         <Route path="/quality-compliance" element={<QualityCompliancePage />} />
         <Route path="/partners" element={<PartnersPage />} />
+        <Route path="/why-tanzania" element={<WhyTanzaniaPage />} />
+        <Route path="/insights" element={<InsightsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Layout>
