@@ -5,22 +5,22 @@ import MissionVisionValues from '../components/MissionVisionValues.jsx';
 export default function AboutPage() {
   return (
     <main className="pb-10">
-      <section className="relative border-b border-slate-100 overflow-hidden min-h-[280px] md:min-h-[320px] flex items-center">
+      <section className="relative border-b border-slate-100 overflow-hidden min-h-[280px] md:min-h-[320px] flex items-center text-left">
         <img
           src={whoWeAreImage}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-50"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-sky-50/92 to-sky-100/88" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/93 via-sky-50/85 to-sky-100/45" />
         <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-16 w-full">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center rounded-full bg-sky-100 text-sky-700 text-[11px] font-semibold px-3 py-1 mb-3 ring-1 ring-sky-200/80">
+            <span className="inline-flex items-center rounded-full bg-sky-600 text-white text-[11px] font-semibold px-3 py-1 mb-3 shadow-sm">
               Who We Are
             </span>
-            <h1 className="text-2xl md:text-3xl font-semibold mb-3 text-sky-900">
+            <h1 className="text-2xl md:text-3xl font-semibold mb-3 text-sky-800">
               Strategic partner for healthcare and MedTech in Tanzania
             </h1>
-            <p className="text-sm md:text-base text-sky-800 leading-relaxed">
+            <p className="text-sm md:text-base text-sky-700 leading-relaxed">
               Medisafe Suppliers Ltd supports international companies with regulatory pathways through TMDA and NIMR,
               institutional engagement, and market entry aligned with national system priorities.
             </p>
