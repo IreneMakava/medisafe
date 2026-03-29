@@ -20,15 +20,15 @@ export default function Layout({ children }) {
       <NavLink to="/products-services" className={navLinkClass}>
         What We Do
       </NavLink>
-      <Link to="/#sectors" className="text-slate-700 hover:text-sky-600">
+      <NavLink to="/sectors" className={navLinkClass}>
         Sectors
-      </Link>
+      </NavLink>
       <NavLink to="/why-tanzania" className={navLinkClass}>
         Why Tanzania
       </NavLink>
-      <Link to="/#team" className="text-slate-700 hover:text-sky-600">
+      <NavLink to="/team" className={navLinkClass}>
         Team
-      </Link>
+      </NavLink>
       <NavLink to="/insights" className={navLinkClass}>
         Insights
       </NavLink>
@@ -37,14 +37,18 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen bg-slate-50 text-justify">
-      <header className="bg-white shadow-md sticky top-0 z-40">
+      <header className="bg-white text-left shadow-md sticky top-0 z-40 overflow-visible">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center gap-3 overflow-visible">
+          <div className="flex items-center justify-between h-16 overflow-visible">
+            <Link
+              to="/"
+              className="relative flex h-16 min-w-[13rem] max-w-[22rem] shrink-0 items-center overflow-visible py-0 pr-1 sm:min-w-[15rem] sm:max-w-[24rem]"
+              aria-label="Medisafe home"
+            >
               <img
                 src={logo}
                 alt="Medisafe Suppliers Limited logo"
-                className="h-20 w-auto scale-150 object-contain"
+                className="h-12 w-auto max-w-none origin-left object-left object-contain sm:h-[3.25rem] [transform:scale(2.85)] sm:[transform:scale(3.05)]"
               />
             </Link>
 
@@ -83,15 +87,15 @@ export default function Layout({ children }) {
                 <NavLink to="/products-services" className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`} onClick={closeMobile}>
                   What We Do
                 </NavLink>
-                <Link to="/#sectors" className="px-1 text-slate-700" onClick={closeMobile}>
+                <NavLink to="/sectors" className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`} onClick={closeMobile}>
                   Sectors
-                </Link>
+                </NavLink>
                 <NavLink to="/why-tanzania" className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`} onClick={closeMobile}>
                   Why Tanzania
                 </NavLink>
-                <Link to="/#team" className="px-1 text-slate-700" onClick={closeMobile}>
+                <NavLink to="/team" className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`} onClick={closeMobile}>
                   Team
-                </Link>
+                </NavLink>
                 <NavLink to="/insights" className={({ isActive }) => `px-1 ${isActive ? 'text-sky-600 font-semibold' : 'text-slate-700'}`} onClick={closeMobile}>
                   Insights
                 </NavLink>
@@ -137,11 +141,14 @@ export default function Layout({ children }) {
                 <Link to="/products-services" className="block hover:text-sky-700">
                   What We Do
                 </Link>
-                <Link to="/#sectors" className="block hover:text-sky-700">
+                <Link to="/sectors" className="block hover:text-sky-700">
                   Sectors
                 </Link>
                 <Link to="/why-tanzania" className="block hover:text-sky-700">
                   Why Tanzania
+                </Link>
+                <Link to="/team" className="block hover:text-sky-700">
+                  Team
                 </Link>
                 <Link to="/insights" className="block hover:text-sky-700">
                   Insights

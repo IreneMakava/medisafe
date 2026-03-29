@@ -10,6 +10,8 @@ import PartnersPage from './pages/PartnersPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import WhyTanzaniaPage from './pages/WhyTanzaniaPage.jsx';
 import InsightsPage from './pages/InsightsPage.jsx';
+import SectorsPage from './pages/SectorsPage.jsx';
+import TeamPage from './pages/TeamPage.jsx';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/sectors" element={<SectorsPage />} />
+        <Route path="/team" element={<TeamPage />} />
         <Route path="/products-services" element={<ProductsServicesPage />} />
         <Route path="/corporates-investors" element={<CorporatesInvestorsPage />} />
         <Route path="/quality-compliance" element={<QualityCompliancePage />} />

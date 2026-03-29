@@ -21,10 +21,9 @@ export default function ProductsServicesPage() {
           <h1 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-2">
             Clear Pathways for Market Entry and Sustainable Growth
           </h1>
-          <p className="text-sm md:text-base text-slate-600 max-w-3xl">
-            Structured advisory and execution support for international healthcare and medical technology companies — regulatory
-            navigation, institutional engagement, and system-aligned market access. This is not a product catalogue; capabilities
-            are tailored to each engagement.
+          <p className="text-sm md:text-base text-slate-600 max-w-3xl text-justify">
+            Medisafe Suppliers Ltd provides structured, compliant, and systemaligned pathways for international healthcare and
+            medical technology companies entering Tanzania.
           </p>
         </div>
       </section>
@@ -32,7 +31,7 @@ export default function ProductsServicesPage() {
       <section className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 items-start">
         <div className="rounded-3xl bg-gradient-to-br from-slate-100 via-sky-50 to-slate-200 border border-slate-200 min-h-[200px] md:min-h-[280px]" aria-hidden />
         <div>
-          <p className="text-xs font-semibold tracking-wide text-sky-600 uppercase mb-3">Capabilities</p>
+          <p className="text-xs font-semibold text-slate-800 mb-3">Our capabilities include:</p>
           <ul className="space-y-3 text-sm text-slate-800">
             {capabilities.map((item) => (
               <li key={item} className="flex gap-2">

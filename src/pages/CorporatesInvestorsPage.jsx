@@ -23,7 +23,7 @@ export default function CorporatesInvestorsPage() {
           <div>
             <h2 className="text-lg md:text-xl font-semibold text-slate-900 mb-2">Support for Corporates &amp; Operators</h2>
             <p className="mb-2">
-              Whether an early-stage healthcare company or a global multinational, Medisafe Suppliers Limited provides
+              Whether an earlystage healthcare company or a global multinational, Medisafe Suppliers Limited provides
               independent, practical, and actionable support to corporate leadership teams entering the Tanzanian market.
             </p>
             <p className="mb-2">We work alongside executive and operational teams to develop:</p>
@@ -51,13 +51,13 @@ export default function CorporatesInvestorsPage() {
             <ul className="list-disc list-inside text-xs space-y-1 text-slate-700 mb-3">
               <li>Commercial and regulatory due diligence</li>
               <li>Market feasibility and demand assessment</li>
-              <li>Early-stage market entry planning</li>
+              <li>Earlystage market entry planning</li>
               <li>Operational readiness and localisation strategy</li>
               <li>Support for joint ventures, manufacturing, and technology transfer</li>
             </ul>
             <p className="text-[11px] text-slate-500">
               We align investor strategies with national health priorities, regulatory frameworks, and government
-              industrialisation agendas to support sustainable, long-term value creation.
+              industrialisation agendas to support sustainable, longterm value creation.
             </p>
           </div>
         </aside>

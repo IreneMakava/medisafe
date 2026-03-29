@@ -85,14 +85,14 @@ const VALUES = [
   { title: 'Compliance', desc: 'TMDA, MSD, ISO, CE, FDA adherence', Icon: IconCompliance },
   { title: 'Reliability', desc: 'Consistent supply and service', Icon: IconReliability },
   { title: 'Professionalism', desc: 'High standards of execution', Icon: IconProfessionalism },
-  { title: 'Partnership', desc: 'Long-term collaboration', Icon: IconPartnership },
+  { title: 'Partnership', desc: 'Longterm collaboration', Icon: IconPartnership },
 ];
 
-export default function MissionVisionValues({ id = 'mission-vision-values' }) {
+export default function MissionVisionValues({ id = 'mission-vision-values', className = '' }) {
   return (
     <div
       id={id}
-      className="relative mt-10 overflow-hidden rounded-[1.75rem] border border-slate-200/90 bg-gradient-to-br from-white via-slate-50/90 to-sky-50/40 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] md:rounded-[2rem]"
+      className={`relative overflow-hidden rounded-[1.75rem] border border-slate-200/90 bg-gradient-to-br from-white via-slate-50/90 to-sky-50/40 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06)] md:rounded-[2rem] ${className}`}
     >
       <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sky-300/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-sky-400/10 blur-3xl" />
@@ -101,9 +101,6 @@ export default function MissionVisionValues({ id = 'mission-vision-values' }) {
         <div className="mx-auto mb-9 max-w-xl md:mb-11">
           <p className="text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-600 sm:text-[11px]">
             Mission, vision &amp; values
-          </p>
-          <p className="mt-2 text-justify text-sm text-slate-600 md:text-[15px] md:leading-relaxed">
-            What drives our work with partners and Tanzania&apos;s health system.
           </p>
         </div>
 
@@ -115,7 +112,7 @@ export default function MissionVisionValues({ id = 'mission-vision-values' }) {
             <div className="min-w-0 flex-1 pt-0.5 text-justify">
               <h3 className="text-left text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-600">Mission</h3>
               <p className="mt-3 border-l-[3px] border-sky-400/70 pl-4 text-[15px] font-medium leading-relaxed text-slate-800 sm:text-base sm:leading-relaxed">
-                To ensure consistent access to safe, compliant, and high-quality medical consumables that strengthen
+                To ensure consistent access to safe, compliant, and highquality medical consumables that strengthen
                 healthcare systems.
               </p>
             </div>

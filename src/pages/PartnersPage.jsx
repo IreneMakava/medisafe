@@ -57,7 +57,7 @@ export default function PartnersPage() {
           <article className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4 text-xs text-slate-700">
             <h3 className="font-semibold text-slate-900 mb-2 text-sm">Long-Term Partnership Approach</h3>
             <p>
-              Focus on sustainable, long-term collaboration aligned with national health priorities and industrialisation agendas.
+              Focus on sustainable, longterm collaboration aligned with national health priorities and industrialisation agendas.
             </p>
           </article>
         </div>
